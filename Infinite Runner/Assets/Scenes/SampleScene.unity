@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 707165411}
   - component: {fileID: 707165410}
   - component: {fileID: 707165409}
-  - component: {fileID: 707165407}
+  - component: {fileID: 707165412}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -359,19 +359,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &707165407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707165406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec7bef124c8fbef4d8bf6520ce6111ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NoButtonMove
-  moveSpeed: 1.77
 --- !u!60 &707165409
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -490,12 +477,25 @@ Transform:
   m_GameObject: {fileID: 707165406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.83, y: -2.15, z: 0}
+  m_LocalPosition: {x: 7.83, y: -2.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707165412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707165406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1b7b2e2224d664895ebf3e605b74dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleBehaivour
+  moveSpeed: 1.95
 --- !u!1 &989233923
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.754717, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -754,7 +754,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1707716375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,7 +767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bef2f7b833c54574c9e82fc6b892ebc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour
-  moveSpeed: 12.1
+  moveSpeed: 20.5
+  jumpForce: 15
 --- !u!70 &1707716376
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
